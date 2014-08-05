@@ -2,6 +2,8 @@ require "bundler/setup"
 
 task :default => :sync
 
+HOSTNAME   = "ajax.googleapis.com"
+
 desc "Downloads all libraries from ajax.googleapis.com that are listed in libraries.txt"
 task :sync do
   File.foreach("libraries.txt") do |url|
